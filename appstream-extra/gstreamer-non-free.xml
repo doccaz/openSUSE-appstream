@@ -2,7 +2,7 @@
 <components version="0.8" origin="">
   <component priority="-1" type="codec">
     <id>gstreamer-bad-freeworld</id>
-    <pkgname>gstreamer1-plugins-bad-freeworld</pkgname>
+    <pkgname>gstreamer-plugins-bad</pkgname>
     <metadata_license>CC0-1.0</metadata_license>
     <name>GStreamer Multimedia Codecs - Non Free</name>
     <summary>Multimedia playback for Bluray, DTS, MMS, MP3, MPEG-2 AAC, MPEG-4, Mimic and Siren</summary>
@@ -48,7 +48,7 @@
   </component>
   <component priority="-1" type="codec">
     <id>gstreamer-ugly</id>
-    <pkgname>gstreamer1-plugins-ugly</pkgname>
+    <pkgname>gstreamer-plugins-ugly</pkgname>
     <metadata_license>CC0-1.0</metadata_license>
     <name>GStreamer Multimedia Codecs - License Issues</name>
     <summary>Multimedia playback for AC-3, AMR, AMR, ASF, DVD, H.264/MPEG-4 AVC, MP2, MP3, MPEG-2 and RealMedia</summary>
