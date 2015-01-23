@@ -10,6 +10,7 @@ SentUpstream: 2014-05-22
   <id type="desktop">gvim.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>Vim</project_license>
+  <summary>A GUI for Vi</summary>
   <description>
     <p>
      Vim is an advanced text editor that seeks to provide the power of the

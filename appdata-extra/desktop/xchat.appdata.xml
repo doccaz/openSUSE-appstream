@@ -9,6 +9,7 @@ SentUpstream: 2014-09-18
 <application>
   <id type="desktop">xchat.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
+  <summary>An IRC Client</summary>
   <description>
     <p>
       XChat is an Internet Relay Chat (IRC) client.

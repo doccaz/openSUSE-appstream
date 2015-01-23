@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Richard Hughes <richard@hughsie.com> -->
 <application>
-  <id type="codec">gstreamer-bad-freeworld</id>
+  <id type="codec">gstreamer-plugins-bad-orig-addon</id>
   <metadata_license>CC0</metadata_license>
   <name>GStreamer Multimedia Codecs - Non Free</name>
   <description>
