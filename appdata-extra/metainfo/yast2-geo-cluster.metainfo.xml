@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.or> -->
+<component type="addon">
+<id>yast2-geo-cluster</id>
+<extends>yast2.desktop</extends>
+<_name>Geo Cluster</_name>
+<_summary>Configuration of booth</_summary>
+<url type="homepage">https://github.com/yast/yast-geo-cluster</url>
+<metadata_license>CC0-1.0</metadata_license>
+<project_license>GPL-2.0</project_license>
+<updatecontact>yast-devel@opensuse.org</updatecontact>
+</component>
