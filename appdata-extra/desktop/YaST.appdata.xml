@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.org> -->
 
 <application>
-  <id type="desktop">yast2.desktop</id>
+  <id type="desktop">YaST.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>

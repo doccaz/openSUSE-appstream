@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.or> -->
 <component type="addon">
 <id>yast2-iscsi-client</id>
-<extends>yast2.desktop</extends>
+<extends>YaST.desktop</extends>
 <_name>iSCSI Initiator</_name>
 <_summary>iSCSI Initiator</_summary>
 <url type="homepage">https://github.com/yast/yast-iscsi-client</url>

@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.or> -->
 <component type="addon">
 <id>yast2-inetd</id>
-<extends>yast2.desktop</extends>
+<extends>YaST.desktop</extends>
 <_name>Network Services (xinetd)</_name>
 <_summary>Network Services (xinetd)</_summary>
 <url type="homepage">https://github.com/yast/yast-inetd</url>

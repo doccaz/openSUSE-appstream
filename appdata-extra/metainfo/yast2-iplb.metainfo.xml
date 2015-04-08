@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.or> -->
 <component type="addon">
 <id>yast2-iplb</id>
-<extends>yast2.desktop</extends>
+<extends>YaST.desktop</extends>
 <_name>IP Load Balancing</_name>
 <_summary>IP Load Balancing</_summary>
 <url type="homepage">https://github.com/yast/yast-iplb</url>

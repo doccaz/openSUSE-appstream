@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Dominique Leuenberger <dimstar@opensuse.or> -->
 <component type="addon">
 <id>yast2-instserver</id>
-<extends>yast2.desktop</extends>
+<extends>YaST.desktop</extends>
 <_name>Installation Server</_name>
 <_summary>Hardware Information</_summary>
 <url type="homepage">https://github.com/yast/yast-instserver</url>
