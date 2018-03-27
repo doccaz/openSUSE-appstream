@@ -64,7 +64,7 @@ class AsInstall(cmdln.Cmdln):
           print("Repotype %s unknown" % opts.type)
 
       if RET:
-          os.system(CMD.format(NAME=opts.alias, APPDATA=RET['appdata'], ICONS=RET['appdata-icons']))
+          os.system(CMD.format(NAME=opts.alias.replace(':','_'), APPDATA=RET['appdata'], ICONS=RET['appdata-icons']))
       else:
           print("could not find appdata tarball and/or icons")
 
