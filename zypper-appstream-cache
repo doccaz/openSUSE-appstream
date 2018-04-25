@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Forcing refresh of already cached appstream data into /var/cache/app-info"
+ZYPP_PLUGIN_APPDATA_FORCE_COLLECT=1 zypper -n lr >/dev/null 2>&1

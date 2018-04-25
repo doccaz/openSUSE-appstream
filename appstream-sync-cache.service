@@ -1,0 +1,12 @@
+[Unit]
+Description=Synccronize AppStream metadata from repositories into AS-cache
+After=network.target
+ConditionDirectoryNotEmpty=!/var/cache/app-info/xmls
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zypper appstream-cache
+
+[Install]
+WantedBy=multi-user.target
+
