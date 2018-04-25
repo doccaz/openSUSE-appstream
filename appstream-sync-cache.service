@@ -4,7 +4,7 @@ After=network.target
 ConditionDirectoryNotEmpty=!/var/cache/app-info/xmls
 
 [Service]
-Type=simple
+Type=forking
 ExecStart=/usr/bin/zypper appstream-cache
 
 [Install]
