@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python3
 
 # Copyright (c) 2014-2018 Dominique Leuenberger, Muhen, Switzerland
 # Copyright (c) 2016 Raymond Wooninck, Vienna, Austria
@@ -22,23 +22,26 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+import os
+import sys
+import glob
 
 # Cleanup existing appdata found on the system
-for list in $(find /var/cache/app-info/xmls/*.xml.gz 2> /dev/null); do
-	appdata=$(basename ${list} .xml.gz)
-	appstream-util uninstall "${appdata}" 2>&1 > /dev/null
-done
+
+for oldappdata in glob.glob('/var/cache/app-info/xmls/*.xml.gz'):
+  appdata=os.path.basename(oldappdata).strip('.xml.gz')
+  os.system("/usr/bin/appstream-util uninstall \"%s\"" % appdata)
 
 # Install new appdata files - libzypp calls us with 6 parameters per repo:
 # -R REPO_ALIAS -t REPO_TYPE -p REPO_METADATA_PATH [-R NEXT_REPO....]
 # We can just blindly pass the parameters through to to helper
-while ([ "$1" = "-R" ]); do
-  /usr/lib/AsHelper install $1 $2 $3 $4 $5 $6
-  shift 6
-done
+args=sys.argv[1:]
 
-# Fixup icon that might have uncompressed with odd permissions
-chmod 755 /var/cache/app-info/icons/*
+try:
+  while args[0] == "-R":
+    os.system("/usr/lib/AsHelper install %s %s %s %s %s %s" % (args[0], args[1], args[2], args[3], args[4], args[5]))
+    args=args[6:]
+except IndexError:
+    pass
 
-# (Re)create the Xapian database required by the KDE tools
-appstreamcli refresh-cache
+
