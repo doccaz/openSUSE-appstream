@@ -1,4 +1,8 @@
 #!/bin/bash
 
-echo "Forcing refresh of already cached appstream data into /var/cache/app-info"
+echo "Forcing resync of AppStream medata from repo cache into /var/cache/app-info"
 ZYPP_PLUGIN_APPDATA_FORCE_COLLECT=1 zypper -n lr >/dev/null 2>&1
+# zypper fires off an async call to InstallAppdata. When started as a systemd service
+# we need to give this task time to complete, or systemd will dispose the slice and kill
+# our unwatched children
+sleep 15
