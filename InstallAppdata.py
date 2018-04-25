@@ -44,4 +44,10 @@ try:
 except IndexError:
     pass
 
+# Fixup icon that might have uncompressed with odd permissions
+for icondir in glob.glob('/var/cache/app-info/icons/*'):
+  os.chmod(icondir, 0o755)
+
+# (Re)create the Xapian database required by the KDE tools
+os.system("/usr/bin/appstreamcli refresh-cache")
 
