@@ -1,6 +1,6 @@
 [Unit]
 Description=Synccronize AppStream metadata from repositories into AS-cache
-After=network.target
+After=local-fs.target
 ConditionDirectoryNotEmpty=!/var/cache/app-info/xmls
 
 [Service]
