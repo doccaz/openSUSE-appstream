@@ -48,6 +48,10 @@ except IndexError:
 for icondir in glob.glob('/var/cache/app-info/icons/*'):
   os.chmod(icondir, 0o755)
 
+# Fixup app-info metadata that is created with restrictive permissions
+for appdir in glob.glob('/var/cache/app-info/xmls/*'):
+  os.chmod(appdir, 0o755)
+
 # (Re)create the Xapian database required by the KDE tools
 os.system("/usr/bin/appstreamcli refresh-cache")
 
